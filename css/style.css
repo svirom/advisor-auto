@@ -25452,6 +25452,7 @@ li.menu-item.disabled > a.nav-link {
 
 .about-us .title-wrap h1 {
    margin-bottom: 20px;
+   line-height: 110%;
 }
 
 .about-us .about-promo-title {
@@ -25488,7 +25489,16 @@ li.menu-item.disabled > a.nav-link {
 }
 
 .about-us .about-card {
-   display: block;
+   display: -ms-flexbox;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: flex;
+   -ms-flex-direction: column;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   height: 100%;
 }
 
 .about-us .about-card:hover {
@@ -25508,7 +25518,10 @@ li.menu-item.disabled > a.nav-link {
 }
 
 .about-us .about-card-content {
-   height: 251px;
+   -ms-flex-positive: 1;
+   -webkit-box-flex: 1;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
    margin-top: 10px;
    padding: 20px;
    color: #ffffff;
@@ -25517,13 +25530,143 @@ li.menu-item.disabled > a.nav-link {
 
 .about-us .about-card-title {
    margin-bottom: 10px;
-   font-family: 'Roboto-Bold';
+   font-family: 'Inter-Bold';
    font-size: 24px;
 }
 
 .about-us .about-card-position {
    margin-bottom: 10px;
-   /* font-family: 'Roboto-Bold'; */
+   font-family: 'Inter-Bold';
+}
+
+.about-us .about-card-position span {
+   font-family: 'Inter';
+}
+
+.about-us .about-leader {
+   padding-top: 32px;
+}
+
+.about-us .about-leader-content {
+   padding-top: 44px;
+}
+
+.about-us .about-leader-content p {
+   margin-bottom: 20px;
+}
+
+.about-us .about-leader-content ul {
+   font-size: 0;
+}
+
+.about-us .about-leader-content ul li {
+   display: inline-block;
+}
+
+.about-us .about-leader-content ul li:not(:last-child) {
+   margin-right: 10px;
+}
+
+.about-us .about-leader-content ul a {
+   width: 40px;
+   height: 40px;
+   border-radius: 4px;
+}
+
+.about-us .about-leader-content ul a img {
+   border-radius: 4px;
+} 
+
+.about-us p.about-leader-promo {
+   margin-bottom: 52px;
+   font-size: 22px;
+}
+
+.about-us .about-contacts {
+   padding-top: 80px;
+}
+
+.about-us .about-contacts h4 {
+   margin-bottom: 38px;
+   font-size: 26px;
+}
+
+.about-us .about-contacts p {
+   font-size: 18px;
+   line-height: 1.45;
+}
+
+.about-us .about-contacts-last {
+   margin-top: 20px;
+}
+
+.about-us .about-contact {
+   height: 100%;
+   padding: 27px;
+   border: 3px solid #EDEFF1;
+   border-radius: 4px;
+}
+
+.about-us .about-contact-title {
+   margin-bottom: 4px;
+   font-family: 'Inter-Bold';
+   font-size: 24px;
+   line-height: 1;
+}
+
+@media (max-width: 1199px) {
+   .about-us .about-stars, .about-us .about-contacts {
+      padding-top: 40px;
+   }
+}
+
+@media (max-width: 991px) {
+   .about-us .about-card-wrapper {
+      margin-bottom: 30px;
+   }
+   .about-us .about-leader {
+      padding-top: 0;
+   }
+}
+
+@media (max-width: 767px) {
+   .about-us .about-contact-wrapper,
+   .about-us p.about-leader-promo {
+      margin-bottom: 20px;
+   }
+   .about-us .about-contacts-last {
+      margin-top: 0;
+   }
+   .about-us .title-wrap h1 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+   }
+   .about-us .about-promo-title {
+      margin-bottom: 10px;
+   }
+   .about-us .about-promo .arrow-list li:last-child,
+   .about-us .about-leader-content ul,
+   .about-us .about-contacts h4 {
+      margin-bottom: 30px;
+   }
+   .about-us .about-stars, .about-us .about-contacts {
+      padding-top: 30px;
+   }
+   .about-us .about-stars h2 {
+      margin-bottom: 30px;
+      font-size: 1.25rem;
+   }
+   .about-us .about-card-title {
+      margin-bottom: 4px;
+   }
+   .about-us .about-leader-content {
+      padding-top: 0;
+   }
+}
+
+.modal.modal-about {
+   z-index: 10001;
 }
 
 .modal.modal-about .modal-dialog {
@@ -25531,6 +25674,7 @@ li.menu-item.disabled > a.nav-link {
    top: auto;
    -webkit-transform: none !important;
    transform: none !important;
+   margin: 0 auto;
 }
 
 .modal.modal-about .modal-dialog .modal-content {
@@ -25541,6 +25685,7 @@ li.menu-item.disabled > a.nav-link {
 }
 
 .modal.modal-about .modal-dialog .modal-content .modal-header {
+   position: static;
    padding-bottom: 20px;
    border-bottom: 2px solid #4F5B65;
 }
@@ -25553,11 +25698,111 @@ li.menu-item.disabled > a.nav-link {
    color: #ffffff;
 }
 
+.modal.modal-about .modal-dialog .modal-content .close {
+   opacity: 1;
+}
+
 .modal.modal-about .modal-dialog .modal-content .modal-body {
-   padding: 0;
+   padding: 24px 0 0;
+}
+
+.modal.modal-about .modal-dialog .modal-content .modal-body h5 {
+   margin-top: 20px;
+   margin-bottom: 20px;
+   font-family: 'Inter-Medium';
 }
 
 .modal.modal-about .modal-dialog .modal-content .modal-body p {
+   margin-bottom: 10px;
    padding: 0;
    text-align: left;
+   font-size: 16px;
+}
+
+.modal.modal-about .modal-dialog .modal-content .modal-body ol {
+   list-style: decimal;
+   padding-left: 24px;
+}
+
+.modal.modal-about .modal-about-img {
+   width: 300px;
+}
+
+.modal.modal-about .modal-about-info {
+   padding-left: 15px;
+}
+
+.modal.modal-about .modal-about-interesting {
+   margin-top: 20px;
+   padding: 20px;
+   border: 2px solid #EDEFF1;
+}
+
+.modal.modal-about .modal-about-interesting h6 {
+   margin-bottom: 10px;
+   font-family: 'Inter-Bold';
+   font-size: 18px;
+}
+
+.modal.modal-about .modal-about-contacts {
+   font-size: 0;
+}
+
+.modal.modal-about .modal-about-contacts li {
+   display: inline-block;
+   margin-right: 12px;
+}
+
+.modal.modal-about .modal-about-contacts a {
+   width: 40px;
+   height: 40px;
+   border-radius: 4px;
+   color: #ffffff;
+   font-family: 'Inter-Bold';
+   font-size: 18px;
+}
+
+.modal.modal-about .modal-about-contacts li.modal-about-tel {
+   margin-left: 20px;
+}
+
+.modal.modal-about .modal-about-contacts li.modal-about-tel a {
+   width: auto;
+   height: auto;
+   line-height: 40px;
+}
+
+.modal.modal-about .modal-about-contacts a img {
+   border-radius: 4px;
+}
+
+@media (max-width: 991px) {
+   .modal.modal-about .modal-dialog .modal-content {
+      border-radius: 0;
+   }
+   .modal.modal-about .modal-about-contacts li.modal-about-tel {
+      display: block;
+      margin-left: 0;
+      margin-top: 10px;
+   }
+   .modal.modal-about .modal-about-contacts li.modal-about-tel a {
+      display: inline-block;
+   }
+}
+
+@media (max-width: 767px) {
+   .modal.modal-about .modal-about-info {
+      padding-top: 30px;
+      padding-left: 0;
+   }
+}
+
+@media (max-width: 575px) {
+   .modal.modal-about .modal-dialog .modal-content {
+      padding: 50px 15px 40px;
+   }
+
+   .modal.modal-about .modal-about-img {
+      width: 100%;
+   }
 }
