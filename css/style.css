@@ -25806,3 +25806,196 @@ li.menu-item.disabled > a.nav-link {
       width: 100%;
    }
 }
+
+/* advisor family card */
+.family-card h2 {
+   margin-bottom: 20px;
+   font-size: 40px;
+}
+
+.family-card .family-header {
+   background: -webkit-linear-gradient(right, #68F276 0%, #48AA51 100%);
+   background: linear-gradient(to left, #68F276 0%, #48AA51 100%);
+}
+
+.family-card .family-promo {
+   display: -ms-flexbox;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: flex;
+   -ms-flex-direction: column;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-pack: center;
+   -webkit-justify-content: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   height: 100%;
+   color: #ffffff;
+}
+
+.family-card .family-promo h1 {
+   margin-bottom: 30px;
+   font-size: 72px;
+   line-height: 1.1;
+}
+
+.family-card .family-promo p {
+   margin-bottom: 20px;
+   font-size: 24px;
+}
+
+.family-card .family-promo .btn {
+   max-width: 290px;
+   padding: 0 28px;
+   color: #fff;
+   font-family: 'Inter-Bold';
+   font-size: 18px;
+   line-height: 48px;
+   text-align: center;   
+   border: 1px solid #0E0F19;
+   border-radius: 4px;
+   background-color: #0E0F19;
+}
+
+.family-card .family-partners {
+   padding: 50px 0;
+   background-color: #EDEFF1;
+}
+
+.family-card .family-partners h3 {
+   margin-bottom: 20px;
+   font-size: 26px;
+}
+
+.family-card .partner-card {
+   display: block;
+   box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15);
+   -webkit-transition: 0.25s ease-out;
+   transition: 0.25s ease-out;
+}
+
+.family-card .partner-card:hover {
+   text-decoration: none;
+   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.family-card .partner-card-img {
+   display: -ms-flexbox;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-box-pack: center;
+   -webkit-justify-content: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -webkit-align-items: center;
+   -ms-flex-align: center;
+   align-items: center;
+   height: 110px;
+   background-color: #ffffff;
+}
+
+.family-card .dark .partner-card-img {
+   background-color: #0E0F19;
+}
+
+.family-card .partner-card-btn {
+   padding: 7px 0 9px;
+   color: #3EB549;
+   text-align: center;
+   border-top: 2px solid #EDEFF1;
+   background-color: #ffffff;
+}
+
+.family-card .family-get {
+   padding: 60px 0;
+}
+
+.family-card .family-get-text p {
+   margin-bottom: 10px;
+}
+
+.family-card .family-get-text h5 {
+   margin-bottom: 10px;
+   color: #3EB549;
+   font-family: 'Inter-Medium';
+}
+
+.family-card .family-get-text .btn-green {
+   max-width: 340px;
+   width: 100%;
+   margin-top: 20px;
+   padding: 0 15px;
+   font-family: 'Inter-Bold';
+}
+
+.family-card .family-video {
+   padding: 30px 0;
+   background-color: #EDEFF1;
+}
+
+.family-card .family-video h2 {
+   margin-bottom: 30px;
+}
+
+.family-card .family-video-container {
+   position: relative;
+   padding: 0 0 56.25%;
+   height: 0;
+}
+
+.family-card .family-video-container iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+@media (max-width: 991px) {
+   .family-card h2 {
+      margin-bottom: 10px;
+      font-size: 26px;
+   }
+
+   .family-card .family-promo h1 {
+      margin-bottom: 10px;
+      font-size: 36px;
+   }
+
+   .family-card .family-promo p {
+      font-size: 18px;
+   }
+
+   .family-card .family-promo .btn {
+      max-width: none;
+   }
+
+   .family-card .family-partners {
+      padding: 30px 0 10px;
+   }
+
+   .family-card .family-partners h3 {
+      font-size: 20px;
+   }
+
+   .family-card .partner-card {
+      margin-bottom: 20px;
+   }
+
+   .family-card .family-get {
+      padding: 30px 0;
+   }
+
+   .family-card .family-get-text h5 {
+      font-size: 18px;
+   }
+
+   .family-card .family-video {
+      padding: 40px 0;
+   }
+}
