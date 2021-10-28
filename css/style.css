@@ -26051,7 +26051,9 @@ li.menu-item.disabled > a.nav-link {
    color: #40B3E0;
 }
 
+.family-card .family-offer-contacts a,
 .family-card .family-offer-contacts a:hover {
+   display: inline-block;
    color: #0E0F19;
 }
 
