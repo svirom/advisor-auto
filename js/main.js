@@ -115,6 +115,28 @@ $('.filter-toggler ').on('click', function (e) {
 }); 
 
 // tooltips(popover)
-    $(function () {
-        $('[data-toggle="popover"]').popover()
+$(function () {
+    $('[data-toggle="popover"]').popover()
+});
+
+$(function () {
+  // smooth scroll family partner card to an anchor #
+	$('.partner-card').bind('click.smoothscroll', function(e) {
+		var target = this.hash;
+    var $target = $(target);
+    var topDiff = $target.offset().top;
+
+		e.preventDefault();
+
+    if ( $(document).width() >= 992 ) {
+      topDiff = topDiff - 150;
+    } else {
+      topDiff = topDiff - 54;
+    }
+
+    $('html, body').stop().animate({
+      'scrollTop': topDiff
+        }, 800, 'swing', function() {
     });
+	});
+});
